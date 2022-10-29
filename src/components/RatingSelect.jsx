@@ -1,15 +1,18 @@
 import { useState } from "react";
 
-function RatingSelect() {
+function RatingSelect({ select }) {
   const [selected, setSelected] = useState(10);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    setSelected(+e.currentTarget.value);
+    select(+e.currentTarget.value);
+  };
 
   return (
     <ul className="rating">
       <li>
         <input
-          type="text"
+          type="radio"
           id="num1"
           name="rating"
           value="1"
@@ -20,7 +23,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num2"
           name="rating"
           value="2"
@@ -31,7 +34,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num3"
           name="rating"
           value="3"
@@ -42,7 +45,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num4"
           name="rating"
           value="4"
@@ -53,7 +56,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num5"
           name="rating"
           value="5"
@@ -64,7 +67,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num6"
           name="rating"
           value="6"
@@ -75,7 +78,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num7"
           name="rating"
           value="7"
@@ -86,7 +89,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num8"
           name="rating"
           value="8"
@@ -97,7 +100,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num9"
           name="rating"
           value="9"
@@ -108,7 +111,7 @@ function RatingSelect() {
       </li>
       <li>
         <input
-          type="text"
+          type="radio"
           id="num10"
           name="rating"
           value="10"
