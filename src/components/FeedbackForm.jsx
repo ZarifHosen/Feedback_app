@@ -55,7 +55,7 @@ function FeedbackForm() {
         <RatingSelect select={(rating) => setRating(rating)} />
         <div className="input-group">
           <input
-            value={addFeedback.item.text}
+            value={addFeedback?.item?.text}
             onChange={handleTextChange}
             type="text"
             placeholder="Write a review"
